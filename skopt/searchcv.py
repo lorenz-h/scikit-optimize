@@ -6,12 +6,12 @@ from scipy.stats import rankdata
 
 import sklearn
 from sklearn.base import is_classifier, clone
-from sklearn.externals.joblib import Parallel, delayed
+from joblib import Parallel, delayed
 from sklearn.model_selection._search import BaseSearchCV
 from sklearn.utils import check_random_state
 from sklearn.utils.fixes import MaskedArray
 from sklearn.utils.validation import indexable, check_is_fitted
-from sklearn.metrics.scorer import check_scoring
+from sklearn.metrics import check_scoring
 
 from . import Optimizer
 from .utils import point_asdict, dimensions_aslist, eval_callbacks
